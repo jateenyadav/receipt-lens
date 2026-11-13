@@ -52,7 +52,7 @@ body {
     disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500;
 }
 @utility btn-primary { @apply btn bg-brand-600 text-white shadow-sm shadow-brand-600/30 hover:bg-brand-700; }
-@utility btn-accent { @apply btn bg-gradient-to-r from-accent-500 to-pink-500 text-white shadow-md shadow-accent-500/30 hover:brightness-105; }
+@utility btn-accent { @apply btn bg-accent-500 text-white shadow-md shadow-accent-500/30 hover:bg-accent-600; }
 @utility btn-ghost { @apply btn border border-slate-200 bg-white/70 text-slate-700 hover:bg-white dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-900; }
 @utility card { @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900; }
 .num { font-variant-numeric: tabular-nums; }
