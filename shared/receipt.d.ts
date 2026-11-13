@@ -1,0 +1,30 @@
+export type Item = { name: string; quantity?: number; amount: number };
+export type Receipt = {
+  id?: string;
+  merchant: string;
+  date: string;
+  currency: string;
+  category: string;
+  items: Item[];
+  subtotal: number | null;
+  tax: number | null;
+  extra: number | null;
+  discount: number | null;
+  total: number | null;
+  paymentMethod?: string | null;
+  notes?: string;
+  source?: 'ai' | 'ocr' | 'manual';
+};
+export type MathCheck = { ok: boolean; itemsSum: number; expectedTotal: number | null; diff: number; problems: string[] };
+export type Split = { total: number; shares: { name: string; amount: number; items: string[] }[] };
+
+export const CATEGORIES: string[];
+export function round2(n: number): number;
+export function itemsTotal(items?: Item[]): number;
+export function checkMath(r: Partial<Receipt>, fmt?: (n: number) => string): MathCheck;
+export function money(amount: number | null | undefined, currency?: string): string;
+export function splitBill(r: Partial<Receipt>, opts: { people: string[]; mode?: 'equal' | 'items'; assign?: number[][] }): Split;
+export function splitMessage(r: Partial<Receipt>, split: Split): string;
+export function fingerprint(r: Partial<Receipt>): string;
+export function parseAmount(v: unknown): number | null;
+export function toCsv(receipts: Partial<Receipt>[]): string;
