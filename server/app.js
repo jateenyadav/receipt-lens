@@ -12,6 +12,8 @@ import { route, parse, errorHandler, log, ApiError } from './lib/http.js';
 import { appRoutes, seedDemo, deleteUserData, BIG_BODY } from './routes.js';
 
 export const APP = { slug: 'receipt-lens', name: 'ReceiptLens' };
+// Every app keeps its own database on the shared cluster (never the one named in the URI).
+process.env.MONGODB_DB ||= APP.slug;
 // Gemini 2.5 Flash "thinking" makes photo reads too slow for Netlify's ~10 s limit; off unless set.
 process.env.GEMINI_REASONING_EFFORT ||= 'none';
 
