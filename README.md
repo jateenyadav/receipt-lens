@@ -1,6 +1,6 @@
 # ReceiptLens
 
-**Live website:** https://receipt-lens-jateen.netlify.app · [![CI](https://github.com/jateenyadav/receipt-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/jateenyadav/receipt-lens/actions/workflows/ci.yml)
+**Live demo:** coming soon (needs free API keys; run it locally in 2 minutes, see below) · [![CI](https://github.com/jateenyadav/receipt-lens/actions/workflows/ci.yml/badge.svg)](https://github.com/jateenyadav/receipt-lens/actions/workflows/ci.yml)
 
 Snap a bill. Get clean data, a maths check and a bill split.
 
